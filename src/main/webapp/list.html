@@ -1,0 +1,326 @@
+<html>       
+<head>
+<title>tree</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<base target="frmright">
+<style type="text/css">
+<!--
+body{
+background-image:url(sh/images/index_r2_c1.jpg);
+background-position:bottom left;
+background-repeat:no-repeat;
+margin:0 0 0 0;
+scrollbar-face-color:#AFCDF6;
+scrollbar-arrow-color:#ffffff;
+scrollbar-base-color:#8EBAF3;
+scrollbar-3dlight-color:#ffffff;
+scrollbar-highlight-color:#ffffff;
+overflow:hidden;
+}
+A:link {
+	COLOR: #000000; FONT-FAMILY: "宋体"; TEXT-DECORATION: none;border:0;cursor:hand;
+}
+A:visited {
+	COLOR: #000000; TEXT-DECORATION: none;border:0;cursor:hand;
+}
+A:active {
+	COLOR: #000000; TEXT-DECORATION: none;border:0;cursor:hand;
+}
+A:hover {
+	COLOR: #ff00ff; TEXT-DECORATION: none;cursor:hand;
+}
+  tr,td,th{
+  font-family:"宋体";
+  font-size:12px;
+  color:#000000;
+  }
+  tr.trs{
+  background-image:url(sh/images/top_03_01.gif);
+  background-repeat:repeat-x;
+  CURSOR: hand;
+  height:27px;
+  width:162px;
+  }
+  td.tds{
+  background-image:url(images/nos/nos_42.gif); 
+  background-repeat:repeat; 
+  text-align:left;
+  width:100%
+  }
+
+  td.tdd{
+  text-align:left;
+  padding-left:40px;
+  }
+  img{
+  background:transparent;
+  cursor:hand;
+  }
+  #im{
+  padding-left:2px; 
+  float:left;
+  padding-top:2px;
+  }
+  #ie{
+  float:left;padding-left:30px;padding-top:5px;
+}
+#main{
+width:162px;height:99%;overflow:auto;overflow-x:hidden;
+}
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+function turnit( ss )
+{
+	var menuArray = new Array("100","200","300","400","500","600");
+	var cont="";
+	var i=0;
+	if ( ss.style.display == "none" )
+	{
+		for(i=0; i < menuArray.length; i++)
+		{
+			cont = eval( "subtree" + menuArray[i] );
+			if ( cont != ss )
+			{
+				if ( cont.style.display != "none" )
+				{
+					cont.style.display = "none";
+				}
+			}
+		}
+		ss.style.display="block";
+	}
+	else
+	{
+		ss.style.display="none";
+	}
+ }
+
+ var arrayMenuStatus=new Array();
+//处理初始化时没有打开的节点
+function showSubTree(sid)
+{  
+  if (arrayMenuStatus[sid]>0)
+  {
+    arrayMenuStatus[sid]=0;
+	turnit( eval( "subtree" + sid ) );
+  }
+  else
+  {
+    arrayMenuStatus[sid]=1;
+	turnit( eval( "subtree" + sid ) );
+  }
+  return;
+}
+
+//处理初始化时已经打开的节点
+function showSubTreeReverse(sid)
+{  
+  if (arrayMenuStatus[sid]>0)
+  {
+    arrayMenuStatus[sid]=0;
+	turnit( eval( "subtree" + sid ) );
+  }
+  else
+  {
+    arrayMenuStatus[sid]=1;
+	turnit( eval( "subtree" + sid ) );
+  }
+  
+  return;
+}
+</script>
+</head> 
+
+<body>
+
+<div id="main">
+ <table border="0" cellspacing="0" cellpadding="0" width="162"> 
+ <tr style="background-image:url(sh/images/nos/nos_05.gif);height:28px;">
+ <td> 
+ </td>
+ </tr>
+ 
+ <tr id="rootsubtree" style='display:block'>
+ <td nowrap>
+ 
+ 
+ 
+ <!--订单处理-->
+  <table border='0' cellspacing='0' cellpadding='0' width="162"> 
+ <tr><td> 
+ <table  align='center'  border='0'  cellspacing='1'  cellpadding='0' width="162">  
+ <tr class="trs" onClick="javascript:showSubTree('100');" target="_self"  style="cursor:hand">
+ <td  nowrap>  </td>
+ <td  nowrap><div id="im"><img src="sh/images/img/mid02.gif"></div><div id="ie"><a href="dingDanLieBiao.html" target="ab">公司状况</a></div>
+ </td></tr>
+ </table> 
+ </td></tr>
+ 
+ <tr  id="subtree100"  style='display:none'> <td nowrap>  
+ 
+ <table  align='center'  border='0'  cellspacing='0'  cellpadding='0'>  
+ <tr><td nowrap  align='center' onClick="javascript:parent.ab.location.href='1.html'" target="ab">&nbsp;<img src="sh/images/img/mid46.gif"><br><a href="1.html" target="ab">产品概况</a></td></tr>
+ <tr  height=6><td></td></tr>
+ </table>
+ 
+ <table  align='center'  border='0'  cellspacing='0'  cellpadding='0'>  
+ <tr><td  align='center' onClick="javascript:parent.ab.location.href='2.html'" target="ab">&nbsp;<img src="sh/images/img/mid16.gif"><br><a href="2.html" target="ab">用户下单</a></td></tr><tr height="6"><td></td></tr></table>
+ 
+ <table  align='center'  border='0'  cellspacing='0'  cellpadding='0'>  
+ <tr><td  align='center' onClick="javascript:parent.ab.location.href='3.html'" target="ab">&nbsp;<img src="sh/images/img/mid16.gif"><br><a href="3.html" target="ab">公司等级制</a></td></tr><tr height="6"><td></td></tr></table>
+ 
+  <table  align='center'  border='0'  cellspacing='0'  cellpadding='0'>  
+ <tr><td  align='center' onClick="javascript:parent.ab.location.href='4.html'" target="ab">&nbsp;<img src="sh/images/img/mid16.gif"><br><a href="4.html" target="ab">产品库存</a></td></tr><tr height="6"><td></td></tr></table>
+ 
+ </td></tr>
+ 
+ </table>
+  <!--订单处理end -->
+  
+  
+  
+  <!--货物处理-->
+    <table border='0' cellspacing='0' cellpadding='0' width="162"> 
+ <tr><td> 
+ <table  align='center'  border='0'  cellspacing='1'  cellpadding='0' width="162">  
+ <tr class="trs" onClick="javascript:showSubTree('200');" target="_self"  style="cursor:hand">
+ <td  nowrap>  </td>
+ <td  nowrap><div id="im"><img src="sh/images/img/mid02.gif"></div><div id="ie"><a href="shouHuo.html" target="ab">货物处理</a></div>
+ </td></tr>
+ </table> 
+ </td></tr>
+   <tr  id="subtree200"  style='display:none'> <td nowrap> 
+  <table  align='center'  border='0'  cellspacing='0'  cellpadding='0'>  
+ <tr><td nowrap  align='center' onClick="javascript:parent.ab.location.href='22.html'" target="ab"><img src="sh/images/img/mid80.gif"><br><a href="22.html" target="ab">发货</a></td></tr><tr height=6><td></td></tr></table>
+ 
+ 
+ <table  align='center'  border='0'  cellspacing='0'  cellpadding='0'>  
+ <tr><td  align='center' onClick="javascript:parent.ab.location.href='33.html'" target="ab">&nbsp;<img src="sh/images/img/mid16.gif"><br><a href="3.html" target="ab">收货</a></td></tr><tr height="6"><td></td></tr></table>
+
+
+<table  align='center'  border='0'  cellspacing='0'  cellpadding='0'>  
+ <tr><td  align='center' onClick="javascript:parent.ab.location.href='11.html'" target="ab">&nbsp;<img src="sh/images/img/mid16.gif"><br><a href="11.html" target="ab">送货</a></td></tr><tr height="6"><td></td></tr></table>
+ 
+  </td></tr>
+ 
+ </table>
+ 
+  <!--货物处理end-->
+  
+  
+  <!--货物跟踪-->
+    <table border='0' cellspacing='0' cellpadding='0' width="162"> 
+ <tr><td> 
+ <table  align='center'  border='0'  cellspacing='1'  cellpadding='0' width="162">  
+ <tr class="trs" onClick="javascript:showSubTree('300');" target="_self"  style="cursor:hand">
+ <td  nowrap>  </td>
+ <td  nowrap><div id="im"><img src="sh/images/img/mid02.gif"></div><div id="ie"><a href="111.html" target="ab">货物追踪</a></div>
+ </td></tr>
+ </table> 
+ </td></tr>
+   <tr  id="subtree300"  style='display:none'> <td nowrap> 
+  <table  align='center'  border='0'  cellspacing='0'  cellpadding='0'>  
+ <tr><td nowrap  align='center' onClick="javascript:parent.ab.location.href='111.html'" target="ab"><img src="sh/images/img/mid80.gif"><br><a href="111.html" target="ab">货物追踪</a></td></tr><tr height=6><td></td></tr></table>
+ 
+  </td></tr>
+ 
+ </table>
+ 
+  <!--货物追踪end-->
+  
+  
+  <!--站点信息管理-->
+  <table border='0' cellspacing='0' cellpadding='0' width="162"> 
+ <tr><td> 
+ <table  align='center'  border='0'  cellspacing='1'  cellpadding='0' width="162">  
+ <tr class="trs" onClick="javascript:showSubTree('400');" target="_self"  style="cursor:hand">
+ <td  nowrap>  </td>
+ <td  nowrap><div id="im"><img src="sh/images/img/mid02.gif"></div><div id="ie"><a href="station.html" target="ab">站点信息管理</a></div>
+ </td></tr>
+ </table> 
+ </td></tr>
+   <tr  id="subtree400"  style='display:none'> <td nowrap>
+  <table  align='center'  border='0'  cellspacing='0'  cellpadding='0'>
+ <tr><td nowrap  align='center' onClick="javascript:parent.ab.location.href='station_add.html'" target="ab"><img src="sh/images/img/mid80.gif"><br><a href="station_add.html" target="ab">新增站点</a></td></tr><tr height=6><td></td></tr></table>
+
+ 
+ <table  align='center'  border='0'  cellspacing='0'  cellpadding='0'>  
+ <tr><td nowrap  align='center' onClick="javascript:parent.ab.location.href='222.html'" target="ab"><img src="sh/images/img/mid80.gif"><br><a href="222.html" target="ab">站点列表</a></td></tr><tr height=6><td></td></tr></table>
+ 
+ 
+  </td></tr>
+ 
+ </table>
+  <!--站点信息管理end-->
+  
+  
+  
+  
+  <!--路线-->
+  <table border='0' cellspacing='0' cellpadding='0' width="162"> 
+ <tr><td> 
+ <table  align='center'  border='0'  cellspacing='1'  cellpadding='0' width="162">  
+ <tr class="trs" onClick="javascript:showSubTree('500');" target="_self"  style="cursor:hand">
+ <td  nowrap>  </td>
+ <td  nowrap><div id="im"><img src="sh/images/img/mid02.gif"></div><div id="ie"><a href="routelist.html" target="ab">路线</a></div>
+ </td></tr>
+ </table> 
+ </td></tr>
+ 
+ <tr  id="subtree500"  style='display:none'> <td nowrap>  
+ 
+ <table  align='center'  border='0'  cellspacing='0'  cellpadding='0'>  
+ <tr><td nowrap  align='center' onClick="javascript:parent.ab.location.href='444.html'" target="ab">&nbsp;<img src="sh/images/img/mid46.gif"><br><a href="444.html.html" target="ab">路线列表</a></td></tr>
+ <tr  height=6><td></td></tr>
+ </table>
+ 
+
+ 
+ </td></tr>
+ 
+ </table>
+  <!--路线end -->
+  
+  
+  
+  <!--参数设置-->
+    <table border='0' cellspacing='0' cellpadding='0' width="162"> 
+ <tr><td> 
+ <table  align='center'  border='0'  cellspacing='1'  cellpadding='0' width="162">  
+ <tr class="trs" onClick="javascript:showSubTree('600');" target="_self"  style="cursor:hand">
+ <td  nowrap>  </td>
+ <td  nowrap><div id="im"><img src="sh/images/img/mid02.gif"></div><div id="ie"><a href="运费规则设置.html" target="ab">订单收录</a></div>
+ </td></tr>
+ </table> 
+ </td></tr>
+   <tr  id="subtree600"  style='display:none'> <td nowrap> 
+  <table  align='center'  border='0'  cellspacing='0'  cellpadding='0'>  
+ <tr><td nowrap  align='center' onClick="javascript:parent.ab.location.href='运费规则设置.html'" target="ab"><img src="sh/images/img/mid80.gif"><br><a href="运费规则设置.html" target="ab">订单收入</a></td></tr><tr height=6><td></td></tr></table>
+ 
+  </td></tr>
+ 
+ </table>
+ 
+  <!--货物追踪end-->
+  
+  
+ </td>
+ </tr>
+ </table>
+
+ </div>
+
+
+</body>
+</html>
+
+

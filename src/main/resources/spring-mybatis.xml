@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+
+	<!-- 引入数据库的配置文件信息 -->
+	<context:property-placeholder location="classpath:db.properties" />
+
+	<!-- 配置druid数据源 -->
+	<bean id="ds" class="com.alibaba.druid.pool.DruidDataSource">
+		<property name="url" value="${url}" />
+		<property name="driverClassName" value="${driver}" />
+		<property name="username" value="${user}" />
+		<property name="password" value="${pass}" />
+
+		<property name="maxActive" value="${maxActive}" />
+		<!-- <property name="maxIdle" value="${maxIdle}" /> -->
+		<property name="minIdle" value="${minIdle}" />
+	</bean>
+
+	<!-- 配置SQLSessionFactoryBean对象，用来获取SqlSession -->
+	<bean id="sf" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="typeAliasesPackage" value="com.qf.pojo" />
+		<property name="mapperLocations" value="classpath:/mapper/*.xml" />
+		<property name="dataSource" ref="ds" />
+		<property name="configLocation" value="classpath:mybatis-config.xml"></property>
+	</bean>
+	
+ <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.qf.dao" />
+		<property name="sqlSessionFactoryBeanName" value="sf" />
+	</bean>
+
+	    <!-- 配置事务管理器 -->
+ <bean id="dtx"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="ds" />
+	</bean>
+
+	   <!-- 设置事务通知，引入事务管理对象 -->
+	<tx:advice id="tx" transaction-manager="dtx">
+		<!--定义属性，声明事务规则 -->
+		<tx:attributes>
+			<tx:method name="create*" propagation="REQUIRED" isolation="DEFAULT"
+				rollback-for="Exception" />
+			<tx:method name="insert*" propagation="REQUIRED" isolation="DEFAULT"
+				rollback-for="Exception" />
+			<tx:method name="add*" propagation="REQUIRED" isolation="DEFAULT"
+				rollback-for="Exception" />
+			<tx:method name="upd*" propagation="REQUIRED" isolation="DEFAULT"
+				rollback-for="Exception" />
+			<tx:method name="del*" propagation="REQUIRED" isolation="DEFAULT"
+				rollback-for="Exception" />
+			<tx:method name="execute*" propagation="REQUIRED"
+				isolation="DEFAULT" rollback-for="Exception" />
+			<tx:method name="do*" propagation="REQUIRED" isolation="DEFAULT"
+				rollback-for="Exception" />
+			<tx:method name="save*" propagation="REQUIRED" isolation="DEFAULT"
+				rollback-for="Exception" />
+			<tx:method name="set*" propagation="REQUIRED" isolation="DEFAULT"
+				rollback-for="Exception" />
+			<tx:method name="get*" propagation="SUPPORTS" isolation="DEFAULT"
+				read-only="true" />
+			<tx:method name="show*" propagation="SUPPORTS" isolation="DEFAULT"
+				read-only="true" />
+			<tx:method name="list*" propagation="SUPPORTS" isolation="DEFAULT"
+				read-only="true" />
+			<tx:method name="select*" propagation="SUPPORTS" isolation="DEFAULT"
+				read-only="true" />
+			<tx:method name="query*" propagation="SUPPORTS" isolation="DEFAULT"
+				read-only="true" />
+			<tx:method name="has*" propagation="SUPPORTS" isolation="DEFAULT"
+				read-only="true" />
+			<tx:method name="ntx*" propagation="NOT_SUPPORTED" />
+			<tx:method name="*" propagation="SUPPORTS" isolation="DEFAULT"
+				read-only="true" />
+		</tx:attributes>
+	</tx:advice>
+	
+	<!-- 定义切面 -->
+	<aop:config>
+		<aop:pointcut id="serviceMethod"
+			expression="execution(* com.qf.service..*.*(..))" />
+			
+ <!-- 将事务增强与切入点组合（织入事务切面） -->
+		<aop:advisor pointcut-ref="serviceMethod" advice-ref="tx" />
+	</aop:config>
+</beans>

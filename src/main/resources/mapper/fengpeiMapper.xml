@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.fengpeiDao">
+    <sql id="getAll">
+		select * from fengpei
+	</sql>
+
+    <select id="getAllfengpei" resultType="fengpei">
+        <include refid="getAll"></include>
+    </select>
+
+    <delete id="delfengpei" parameterType="com.qf.dao.fengpeiDao">
+        DELETE FROM fengpei WHERE id=#{id}
+    </delete>
+</mapper>

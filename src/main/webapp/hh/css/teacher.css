@@ -1,0 +1,93 @@
+/*--------------------------------------------------|
+| dTree 2.05 | www.destroydrop.com/javascript/tree/ |
+|---------------------------------------------------|
+| Copyright (c) 2002-2003 Geir Landr?              |
+|--------------------------------------------------*/
+
+body { 
+background-image: url(../images/menubg.gif); 
+background-repeat:repeat-x;
+background-image:url(../images/txz.jpg);
+background-position:bottom center;
+background-repeat:no-repeat;
+margin:0 0 0 0;
+scrollbar-face-color:#DFDFDF;
+scrollbar-arrow-color:#ffffff;
+scrollbar-base-color:#CFCFCF;
+scrollbar-3dlight-color:#ffffff;
+scrollbar-highlight-color:#ffffff;
+}
+#contents{
+width:100%;
+font-family:"宋体";
+font-size:12px;
+
+float:left;
+}
+#contents #con{
+width:140px;
+float:left;
+padding-top:2px;
+padding-left:60px;
+}
+#contents_01{
+width:100%;
+height:16px;
+float:left;
+font-family:"宋体";
+font-size:12px;
+FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr=#d9d9d9, EndColorStr=#ffffff);
+}
+#contents_01 #con_01{
+width:140px;
+float:left;
+padding-top:2px;
+padding-left:60px;
+
+}
+#contents_02{
+width:190px;
+height:18px;
+background-image:url(../images/teach/nos_22.gif);
+background-repeat:repeat-x;
+float:left;
+font-family:"宋体";
+font-size:12px;
+}
+#contents_02 #con_02{
+width:140px;
+float:left;
+padding-top:2px;
+padding-left:60px;
+}
+/*main页面*/
+.style1 {color: #FF3300}
+.dtree {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666;
+	white-space: nowrap;
+}
+.dtree img {
+	border: 0px;
+	vertical-align: middle;
+}
+.dtree a {
+	color: #333;
+	text-decoration: none;
+}
+.dtree a.node, .dtree a.nodeSel {
+	white-space: nowrap;
+	padding: 0px 0px 0px 0px;
+}
+.dtree a.node:hover, .dtree a.nodeSel:hover {
+	color: #333;
+	text-decoration: underline;
+}
+.dtree a.nodeSel {
+	background-color: #c0d2ec;
+}
+.dtree .clip {
+	overflow: hidden;
+}
+

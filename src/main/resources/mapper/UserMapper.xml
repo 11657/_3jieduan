@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.UserDao">
+    <sql id="getAll">
+		select * from user
+	</sql>
+    <select id="getAllUser" resultType="User">
+        <include refid="getAll"></include>
+    </select>
+
+
+    <insert id="getAdd">
+      insert into  user values (null, #{name},#{li},#{time})
+    </insert>
+
+    <delete id="delUser" parameterType="com.qf.dao.UserDao">
+        DELETE FROM user WHERE id=#{id}
+    </delete>
+    <update id="updateUser">
+    UPDATE user SET name=#{name},li=#{li},time=#{time} WHERE id=#{id};
+    </update>
+</mapper>

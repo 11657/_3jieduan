@@ -1,0 +1,88 @@
+/* CSS Document */
+
+body{
+margin:0 0 0 0;
+text-align:center;
+}
+.input1{
+border-bottom:#000000 solid 1px;
+border-left:#000000 solid 0px;
+border-top:#000000 solid 0px;
+border-right:#000000 solid 0px;
+}
+#content{
+width:100%;
+height:130px;
+
+}
+#content #haj1{
+width:100%;
+height:18px;
+float:left;
+}
+#content #haj1 #huang1{
+width:92px;
+height:18px;
+float:left;
+background-image:url(../images/nos/nos_06.gif);
+font-family:"ËÎÌו";
+font-size:12px;
+padding-top:2px;
+color:#FF0000;
+text-align:left;
+}
+#content #haj1 #huang2{
+width:expression(haj1.offsetWidth-92);
+height:18px;
+float:left;
+background-image:url(../images/nos/nos_07.gif);
+background-repeat:repeat-x;
+background-position:bottom;
+}
+#content #haj2{
+width:100%;
+height:60px;
+float:left;
+}
+#content #haj2 #huang3{
+width:100%;
+height:30px;
+float:left;
+
+font-family:"ËÎÌו";
+font-size:12px;
+text-align:left;
+padding-top:5px;
+
+}
+#content #haj2 #huang4{
+width:100%;
+height:30px;
+float:left;
+border-bottom:#0000FF solid 1px;
+font-family:"ËÎÌו";
+font-size:12px;
+text-align:left;
+
+}
+
+#content #haj3{
+width:100%;
+height:25px;
+border-bottom:#0000FF solid 1px;
+}
+/*  xia  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+

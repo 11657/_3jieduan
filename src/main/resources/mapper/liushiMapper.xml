@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.liushiDao">
+    <sql id="getAll">
+		select * from liushi
+	</sql>
+
+    <select id="getAllliushi" resultType="liushi">
+        <include refid="getAll"></include>
+    </select>
+
+    <insert id="getAdd">
+      insert into  liushi values (null, #{name},#{number})
+    </insert>
+
+    <update id="updateliushi">
+    UPDATE liushi SET name=#{name},number=#{number} WHERE id=#{id};
+    </update>
+
+    <delete id="delliushi" parameterType="com.qf.dao.liushiDao">
+        DELETE FROM liushi WHERE id=#{id}
+    </delete>
+</mapper>
+
+
+

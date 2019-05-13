@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.chuliDao">
+    <sql id="getAll">
+		select * from chuli
+	</sql>
+
+    <select id="getAllchuli" resultType="chuli">
+        <include refid="getAll"></include>
+</select>
+
+
+    <select id="getchuli" resultType="com.qf.pojo.chuli" parameterType="java.lang.String">
+
+SELECT * from chuli chu where chu.name like CONCAT('%',#{param},'%')
+    </select>
+
+
+
+</mapper>

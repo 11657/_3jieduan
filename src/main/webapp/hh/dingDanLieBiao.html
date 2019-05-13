@@ -1,0 +1,98 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>订单处理</title>
+<link rel="stylesheet" type="text/css" href="css/you.css" />
+</head>
+
+<body>
+<!--上-->
+<div id="content">
+
+<div id="haj1">
+<div id="huang1">订单处理</div><div id="huang2"></div>
+</div>
+
+<div id="haj2">
+<div id="haj3">
+<div id="anniu2">
+</div>
+</div>
+
+<div id="haj4">
+<div id="fen">第1/1页 每页10条</div>
+<div id="ye"><img src="images/nos/nos_08.gif"> <img src="images/nos/nos_09.gif"> 1 <img src="images/nos/nos_10.gif"> <img src="images/nos/nos_11.gif"> 共1页</div>
+
+</div>
+
+</div>
+<!--下-->
+<div id="xia">    
+
+
+<div id="tabb">
+
+<form name="form1">
+<table width="200" border="1" id="table" class="tab">
+  <tr class="trs">
+    <td width="15%">订单</td>
+    <td width="15%">客户名称</td>
+	<td width="20%">下单日期</td>
+	<td width="20%">订单状态</td>
+	<td width="15%">发货站点</td>
+	<td width="15%">收货站点</td>
+
+  </tr>
+  <tr>
+    <td><a href="dingDanXiangQing.html" target="ab" style="border:0">NO0001</a></td>
+    <td>李四</td>
+	<td>2007-10-10</td>
+	<td>已接收</td>
+	<td>北京</td>
+	<td>郑州</td>
+	<!--
+        <td>
+	<s:if test="status==未发货">
+		<a href="submit.action?id=<s:property value='vid'/>">发货</a>
+		
+	</s:if>
+	<s:if test="status==已发货||status==运输中">
+	    <a href="fukuan.action?id=<s:property value='vid'/>">收货</a>
+	</s:if>
+	<s:if test="status==已收货">
+		<a href="toCheck.action?id=<s:property value='vid'/>">送货</a>
+	</s:if></td>-->
+
+
+  </tr>
+  <tr>
+    <td><a href="dingDanXiangQing.html" target="ab" style="border:0">NO0002</a></td>
+    <td>张三</td>
+    <td>2007-10-10</td>
+	<td>运输中</td>
+	<td>北京</td>
+	<td>郑州</td>
+        <!--<td>
+	<s:if test="status==未发货">
+		<a href="submit.action?id=<s:property value='vid'/>">发货</a>
+		
+	</s:if>
+	<s:if test="status==已发货||status==运输中">
+	    <a href="fukuan.action?id=<s:property value='vid'/>">收货</a>
+	</s:if>
+	<s:if test="status==已收货">
+		<a href="toCheck.action?id=<s:property value='vid'/>">送货</a>
+	</s:if></td>-->
+
+
+  </tr>
+
+</table>
+</form>
+
+</div>
+</div>
+
+</body>
+</html>

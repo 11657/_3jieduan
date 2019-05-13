@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.oppDao">
+    <sql id="getAll">
+		SELECT * FROM Opp
+	</sql>
+
+    <select id="getAllOpp" resultType="Opp">
+        <include refid="getAll"></include>
+    </select>
+    <update id="updateOpp">
+    UPDATE opp SET ss=#{ss},dd=#{dd},zz=#{zz},hh=#{hh},qq=#{qq} WHERE id=#{id};
+    </update>
+
+</mapper>

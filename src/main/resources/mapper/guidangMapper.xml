@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.guidangDao">
+    <select id="getAllguidang" resultType="com.qf.pojo.guidang">
+       select * from guidang
+   </select>
+
+    <insert id="getAdd">
+      insert into  guidang values (null,#{name},#{zz},#{cc},#{vv},#{aa},#{ee})
+    </insert>
+
+
+    <update id="updateguidang">
+    UPDATE guidang SET name=#{name},zz=#{zz},cc=#{cc},vv=#{vv},aa=#{aa},ee=#{ee} WHERE id=#{id};
+    </update>
+
+</mapper>

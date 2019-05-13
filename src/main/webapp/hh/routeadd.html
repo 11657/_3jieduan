@@ -1,0 +1,70 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>站点</title>
+<link rel="stylesheet" type="text/css" href="css/you.css" />
+<script type="text/javascript" src="js/function.js"></script>
+</head>
+
+<body>
+<!--上-->
+<div id="content" style="height:70px;">
+
+<div id="haj1">
+<div id="huang1">路线</div><div id="huang2"></div>
+
+
+</div>
+
+<!--下-->
+<div id="xia" style="height:expression(body.offsetHeight-70);">
+<div id="tabb">
+<form name="form2" action="routelist.html" method="post">
+
+   路线名称<input type="text" name="q1" class="input4">
+   类型<input type="text" name="q2" class="input4">
+<table width="150" border="1" id="tables" class="tabs">
+
+
+<tr>
+<td>起始站点<input type="text" name="q3" class="input4"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td >第二站<input type="text" name="q4" class="input4"></td>
+<td >距上一站距离<input type="text" name="q3" class="input4"></td>
+<td >预计时间<input type="text" name="q3" class="input4"></td>
+<td><input type="button" value="删除" /></td>
+</tr>
+
+<tr>
+<td >第三站<input type="text" name="q3" class="input4"></td>
+<td >距上一站距离<input type="text" name="q3" class="input4"></td>
+<td >预计时间<input type="text" name="q3" class="input4"></td>
+<td><input type="button" value="删除" /></td>
+</tr>
+
+<tr>
+<td >终点站<input type="text" name="q3" class="input4"></td>
+<td >距上一站距离<input type="text" name="q3" class="input4"></td>
+<td >预计时间<input type="text" name="q3" class="input4"></td>
+<td><input type="button" value="增加中间站点" /></td>
+</tr>
+
+
+
+  <tr>
+  	<td colspan="6"><input type="submit" value="增加"/><input type="button" onClick="history.back();" value="返回"/></td>
+  </tr>
+</table>
+</form>
+</div>
+
+</div>
+
+</body>
+</html>

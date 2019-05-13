@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.gongxieDao">
+    <sql id="getAll">
+		select * from gongxie
+	</sql>
+
+    <select id="getAllgongxie" resultType="gongxie">
+        <include refid="getAll"></include>
+    </select>
+
+
+    <insert id="getAdd">
+      insert into  gongxie values (null,#{ff},#{ss},#{aa},#{qq})
+    </insert>
+
+
+    <delete id="delgongxie" parameterType="com.qf.dao.gongxieDao">
+        DELETE FROM gongxie WHERE id=#{id}
+    </delete>
+
+    <update id="updategongxie">
+    UPDATE gongxie SET ff=#{ff},ss=#{ss},aa=#{aa},qq=#{qq} WHERE id=#{id};
+    </update>
+</mapper>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.kucunDao">
+    <sql id="getAll">
+		select * from kucun
+	</sql>
+
+    <select id="getAllkucun" resultType="kucun">
+        <include refid="getAll"></include>
+    </select>
+    <insert id="getAdd">
+      insert into  kucun  values (null, #{name},#{ss},#{oo})
+    </insert>
+
+    <delete id="delkucun" parameterType="com.qf.dao.kucunDao">
+        DELETE FROM kucun WHERE id=#{id}
+    </delete>
+    <update id="updatekucun">
+    UPDATE kucun SET name=#{name},ss=#{ss},oo=#{oo} WHERE id=#{id};
+    </update>
+</mapper>

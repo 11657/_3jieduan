@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.fuwuDao">
+    <sql id="getAll">
+		select * from fuwu
+	</sql>
+
+    <select id="getAllfuwu" resultType="fuwu">
+        <include refid="getAll"></include>
+    </select>
+    <insert id="getAdd">
+      insert into  fuwu values (null, #{zhi},#{xu})
+    </insert>
+
+    <delete id="delfuwu" parameterType="com.qf.dao.fuwuDao">
+        DELETE FROM fuwu WHERE id=#{id}
+    </delete>
+
+    <update id="updatefuwu">
+    UPDATE fuwu SET zhi=#{zhi},xu=#{xu} WHERE id=#{id};
+    </update>
+
+<select id="selectfuwuByid" resultType="com.qf.dao.fuwuDao">
+
+    select * from fuwu where id=#{id}
+</select>
+
+</mapper>

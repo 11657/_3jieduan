@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.jingliDao">
+   <select id="getAlljingli" resultType="com.qf.pojo.jingli">
+       select * from jingli
+   </select>
+    <update id="updatejingli">
+    UPDATE jingli SET hh=#{hh},zz=#{zz},jj=#{jj},qq=#{qq} WHERE id=#{id};
+    </update>
+
+</mapper>

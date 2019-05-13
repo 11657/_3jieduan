@@ -1,0 +1,115 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+
+
+        <meta http-equiv="Content-Type" content="textml; charset=gb2312" />
+        <title>物流管理系统</title>
+        <style type="text/css">
+            <!--
+            body{
+                text-align:center;
+                background-color:#7A9BBD;
+            }
+            .button{
+                width:75px;
+                height:25px;
+                border:0px;
+                background-image:url(imagestton/login.gif);
+                background-repeat:no-repeat;
+                font-family:"宋体";
+                font-size:12px;
+                padding-top:2px;
+                cursor:hand;
+                background-color:transparent;
+                text-align:left;
+                padding-left:15px;
+            }
+            .input{
+                width:120px;
+                border:#999999 solid 1px;
+                text-align:left;
+                height:20px;
+            }
+            .inputs{
+                border:#99CC00 solid 1px;
+                background-color:transparent;
+                text-align:left;
+                width:120px;
+                height:20px;
+            }
+            table{
+                font-family:"宋体";
+                font-size:12px;
+            }
+            #top{
+                width:199px;
+                height:70px;
+                background-image:url(imagesss_52.gif);
+                margin:0px;
+                float:inherit;
+                margin-left:2px;
+            }
+            #main{
+                margin:0px auto;
+                width:510px;
+                height:360px;
+                background-image:url(sh/images/get2.gif);
+                margin-top:10px;
+            }
+            #main #user{
+
+                width:230px;
+                height:120px;
+                margin-top:130px;
+                margin-left:200px;
+                float:right;
+            }
+            #main #user #text{
+                width:250px;
+                height:20px;
+                font-family:"宋体";
+                font-size:12px;
+            }
+            #bottom{
+                width:270px;
+                height:20px;
+                position:absolute;
+                left:expression(body.offsetWidth/2-270/2);
+                bottom:10px;
+                font-family:"宋体";
+                font-size:12px;
+                color:#FFFFFF;
+            }
+            -->
+        </style>
+    </head>
+
+<body>
+<div id="top"></div>
+<div id="main">
+    <div id="user">
+        <form name="form1" action="login" method="post">
+            <table width="100%" border="0" height="100%">
+                <tr>
+                    <td width="30%" align="right">用户名：</td>
+                    <td width="70%" align="left"><input type="text" name="uname" class="input" onMouseOver="this.className='inputs'" onMouseOut="this.className='input'" onKeyDown="if(event.keyCode==13){event.keyCode=9}"></td>
+                </tr>
+                <tr>
+                    <td align="right">密&nbsp;&nbsp;码：</td>
+                    <td align="left"><input type="password" name="upass" class="input" onMouseOver="this.className='inputs'" onMouseOut="this.className='input'" onKeyDown="if(event.keyCode==13){event.keyCode=9}"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" name="sub" value="登 录" class="button">
+                        <input type="reset" name="reset" value="重 置" class="button">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+<div id="bottom">copyright&copy;物流学院 版权所有</div>
+</body>
+<html>

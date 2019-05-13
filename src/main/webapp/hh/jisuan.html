@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>运费计算</title>
+<link rel="stylesheet" type="text/css" href="css/you.css" />
+<script type="text/javascript" src="js/function.js"></script>
+</head>
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<script type="text/javascript" src="./js/Demo01.js">
+</script>
+<script type="text/javascript">
+	//第一种方法
+	function sum(oper){
+		var num1=document.getElementById("num1").value;
+		var num2=document.getElementById("num2").value;
+		var num3=eval(num1+oper+num2);
+		document.getElementById("num3").value=num3;
+
+
+	}
+
+</script>
+<body>
+
+
+
+<div id="xia" style="height:expression(body.offsetHeight-70);">
+
+<div id="tabb">
+<fieldset>
+	<legend>重复路程距离计算</legend>
+	<form name="form1" action="运费计算.html" method="post" >
+	<table width="200" border="1" id="table" class="tab">
+	  <tr>
+		<td width="20%" class="tds2">请输出俩地距离：</td>
+		<td width="30%" class="tds1">请输入路程<input type="text" name="num1" id="num1">-请输入路程<input type="text" name="num2" id="num2"></td>
+	  </tr>
+
+
+
+	  <tr><td colspan="4">
+		  <input type="button" value="=" onclick="sum('-')">路程<input type="text" name="num3" id="num3">
+
+	</table>
+	</form>
+</fieldset>
+
+
+</body>
+</html>
